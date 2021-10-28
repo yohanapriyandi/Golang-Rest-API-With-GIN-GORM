@@ -160,7 +160,7 @@ func main() {
 	// initialisasi var router
 	router := gin.Default()
 
-	v1 := router.Group("/v1")
+	v1 := router.Group("/api/v1")
 	// GET router
 	v1.GET("/books", bookHandler.GetBooksHandler)
 	v1.GET("/books/:id", bookHandler.GetBookHandler)
