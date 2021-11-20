@@ -13,7 +13,7 @@ import (
 
 func main() {
 	// Koneksi ke database mysql
-	dsn := "root:cintaSunn@h234@tcp(127.0.0.1:3306)/pustaka-api?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:1tc5_45uNn41-1@tcp(127.0.0.1:3306)/pustaka-api?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
