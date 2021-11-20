@@ -160,13 +160,22 @@ func main() {
 	// initialisasi var router
 	router := gin.Default()
 
+	/*
+		this for versioning API
+		you can add your versioning API below
+	*/
+
 	v1 := router.Group("/api/v1")
+
 	// GET router
 	v1.GET("/books", bookHandler.GetBooksHandler)
 	v1.GET("/books/:id", bookHandler.GetBookHandler)
 	v1.PUT("/books/:id", bookHandler.UpdateBookHandler)
-	// POST Router
+
+	// POST router
 	v1.POST("/books", bookHandler.CreateBookHandler)
+
+	// DELETE router
 	v1.DELETE("/books/:id", bookHandler.DeleteBookHandler)
 
 	router.Run()
